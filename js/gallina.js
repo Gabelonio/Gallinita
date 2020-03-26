@@ -44,7 +44,7 @@ function Gallina(){
 		ctx.save();
 		ctx.fillStyle = "#ffffff";
 		ctx.font = "12px sans-serif";
-		ctx.fillText("puntos: "+ this.puntos, x, y + 75);
+		ctx.fillText("points: "+ this.puntos, x, y + 75);
 		ctx.restore();
 	}
 

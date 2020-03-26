@@ -64,7 +64,7 @@ function capturaTeclado(event){
 }
 
 function run(){
-	//Configurando el expacio de juego
+	//Configurando el espacio de juego
 	buffer.width = miCanvas.width;
 	buffer.height = miCanvas.height;
 	contextoBuffer = buffer.getContext("2d");
