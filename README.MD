@@ -1,77 +1,90 @@
+# Lost Chicken's Food :chicken:
 #### Gabriel Esteban Castillo Ramirez
-#### Omar Alejandro Espitia Sanchez
-#### Juan Camilo Martinez Lopez
-# Juego de la Gallina :chicken:
-### Introducción
-La gallina se ha perdido en la carretera y su alimento se ha esparcido en ella, esta hambrienta
-y necesita de su maiz para saciar su necesidad de alimento.
+#### Based on Alejandro Paolo Daza's Game : "La llorona".
+### Introduction
+The Chicken is lost in the Highway and its food is spread all over it, the Chicken is hungry
+and needs to eat the corn even with cars going at high speed.
 
-
-### Instrucciones del juego
-* La gallina es controlada por las flechas del teclado o con las teclas W A S D, el objetivo del juego
-es recolectar maiz para obtener puntos, cada maiz otorga un punto.
-* Los obstaculos son los autos, los cuales pueden ir muy velozmente o muy lentamente, ambos colocando 
-al jugador en distintos retos a su destreza, tocar un auto significar  la muerte de la gallina y por 
-ende la terminación de la partida.
-
+### Game instructions
+* The chicken is controlled with the keyboard's arrows or with the keys W A S D, the objective of the game
+  is to collect all the corn possible, the more corn the chicken eats, the more points the player gains. 
+* The obstacles are the vehicles in the screen, they can go fast or slow, if the chicken gets touched by 
+  a vehicle, the game will end.
 
 <img src="https://user-images.githubusercontent.com/43209755/60149719-4b444080-979b-11e9-981c-fa76689d7db6.png" width="560">
 
-### Estructura del juego
-El juego se apoya en lenguajes como HTML y JavaScript, además de hacer uso de CSS, no se ahondará en el uso del CSS.
+### Game Structure
+The Game uses different languages :
+* For the visual aspect HTML and CSS is used.
+* For the logical aspect JavaScript is used. 
 
-#### Esqueleto principal
-La estructura principal del juego se encuentra en el archivo "script.js" en donde veremos lo siguiente:
-1. El juego se apoya en dos estados, cuando la gallina vive y cuando muere.
-2. Las condiciones para inicializar el juego se encuentran en el archivo.
-3. Los eventos de interacción con la p gina se dan igualmente dentro del archivo (intrucciones, reinicio de juego y captura de teclas).
+#### Main Structure
+The principal structure is located in the file "script.js", we will see different aspects as:
+1. The continuity leans on two states, when the Chicken is alive and when it doesn't.
+2. Entities such as the Chicken, the Corn and the Cars are treated as Objects.
+3. The logic given to capture the keys lays on this script as well.
+4. Events of interaction as colliders given in the main function (run()), also the control of the states mentioned before.
+5. The deployment of instructions and reseting the game. 
 
-#### Visualización e interacción 
-El £nico archivo "index.html" con ayuda de "default.css" nos ayuda a dar la base visual del juego, en ella encontramos:
-1. La estructura visual de la pagina en donde el juego se despliega.
-2. Información de creadores, palabras clave y descripción breve del juego.
-3. Referencias visuales y auditivas del juego (las fuentes de las referencias se encuentran en el pdf adjunto en el repositorio).
+#### Visualization and its interaction 
+The only file "index.html" with the backup of "default.css" create the visual base of the game, in these files we find:
+1. The visual deployment of the game ("index.html").
+2. Information of the creator and collaborator and a brief description of the game. 
+3. The auditive deployment of the game (All the audios are referenced, these are at the end of this text). 
 
-#### Funcionalidad
-Los archivos de cada elemento visible en el juego se encuentran clasificados en "gallina.js","maiz.js" y "carro.js".
-Cada uno de los scripts define la base de tanto sus cambios visuales, su l¢gica interna y la experiencia de juego.
-Empezando por la gallina, ella cuenta con los siguientes atributos:
-* Posición en "x" y "y".
-* Imagenes (sprites).
-* Estado vivo/muerto.
-* Puntaje.
+#### Functionality
+The files that set the individual properties of each entity are located in "gallina.js","maiz.js" and "carro,js". 
+Each one of the scripts define the base of visual change and individual logic. 
 
+Beginning with the chicken, it has these attributes:
+* Position in "x" and "y".
+* Images (sprites).
+* Alive/Dead state.
+* Score.
 
-Además cuenta con los siguientes comportamientos:
-* Actualizar su posición conforme se presionan teclas de movimiento.
-* Dibujarse en el tablero junto a sus caracter¡sticas (puntaje).
-* Verificar colisiones ya sea con autos o con ma¡z.
-
-Continuando con el maíz, ella contiene funciones y atributos más sencillos, sus atributos son:
-* Posición en "x" y "y".
-* Estado comido/no comido.
-* Imagen.
-
-
-Siendo complementado por sus funciones:
-* Dibujarse en el tablero.
-* Cambiar de posición cada que sea comido por la gallina.
-Apoyandose de una función sencilla de generaci¢n de números aleatorios. 
+In addition, it has these behaviours:
+* Refresh the position while the user presses the movement keys.
+* Drawing itself in the enviroment together with the score.
+* Modifying characeristics when a collision is given.
 
 
-Finalmente los autos, los cuales cuentan con distintos comportamientos y varriables complementarias, continuando con el orden, estos atributos son:
-* Posición en "x" y "y".
-* Velocidad.
-* Imagen.
+Continuing with the corn, it contains more simple functions and attributes, which are:
+* Position in "x" and "y".
+* Image (sprite).
+* Eaten/Not eaten state.
 
-Asimismo, veremos que cuenta con sus respectivas funciones:
-* Inicializar las características del carro.
-* Reinicar las características del carro.
-* Dibujarse en el tablero.
-* Actualizar su posici¢n dependiendo de su velocidad.
-Se apoya en funciones como generar números aleatorios, posición aleatoria dada una cantidad de carriles,
-asigna la velocidad dependiendo del carril en donde esta y de igual manera la imagen asociada a su velocidad. 
- 
-Finalmente veremos en ejecución cada subestructura accionando el .html que se encuentra en el repositorio.
+Being complemented by its functions:
+* Drawing itself in the enviroment.
+* Changing positions whenever it gets eaten by the chicken.
 
+
+And ending with the cars, which contain different behaviours and complementary variables, these are:
+* Position in "x" and "y".
+* Images (sprites, one for each car).
+* Velocity.
+
+At last, we will see the different functions contained:
+* Initialize the image and velocity of the car.
+* Reset the characteristic whenever a car gets to the edge of the enviroment.
+* Drawing itself in the enviroment.
+* Refresh the position depending on the velocity.
+
+### Execution
+By cloning this repository, the user will only has to double click the "index.html" file and the game will automatically start. 
+
+### Miscellaneous
+
+1. Corn Image : "Minecraft: Pocket Edition Item Crop Wheat" Available at: https://www.uihere.com/free-cliparts/minecraft-pocket-edition-item-crop-wheat-minecraft-pixel-art-doge-5141279
+
+2. Cars Image: "Cute vehicles by toribird" Available at: http://pixeljoint.com/pixelart/81033.htm
+
+3. Highway Image: "Toon road texture by davidstenfors" Available at: https://www.davidstenfors.com/#!/downloads
+
+4. Background Image: "powerpuff girls house - Google Search" Available at: https://co.pinterest.com/pin/390757705152412055/?lp=true
+
+5. Tombstone Image: "Pinsanity 8-Bit Pixel Tombstone"Game Over" Enamel Lapel Pin" Available at: https://www.amazon.com/Pinsanity-8-Bit-Pixel-Tombstone-Enamel/dp/B07BCMXZKP?language=en_US
+
+6. Chicken Image: "whtdragon's animals and running horses- now with more dragons!" Available at: https://forums.rpgmakerweb.com/index.php?threads/whtdragons-animals-and-running-horses-now-with-more-dragons.53552/
+
+7. Chiken Sounds: "Collection of sound effects found in Minecraft" Available at: https://minecraft.gamepedia.com/Category:Sound_effects
 
