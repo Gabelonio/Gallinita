@@ -70,7 +70,7 @@ At last, we will see the different functions contained:
 * Refresh the position depending on the velocity.
 
 ### Execution
-By clicking the link below the game will automatically start:
+By clicking the following link the game will automatically start:
 [Lost Chickens Food](
 https://gabelonio.github.io/Lost-Chickens-Food/)
 
